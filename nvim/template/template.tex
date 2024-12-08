@@ -1,0 +1,29 @@
+% Created: <+DATE+> by <+AUTHOR+>
+\documentclass{report}
+% \documentclass{article}
+\usepackage{luatexja}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=red]{hyperref}
+\usepackage{cleveref}
+\usepackage{unicode-math} % Allows custom math fonts
+\setmathfont{Latin Modern Math} % Commonly looks good for epsilon
+\renewcommand{\thesection}{\arabic{section}}
+
+% new command
+\newcommand{\eps}{\varepsilon}
+
+% \graphicspath{{hoge1/figs}
+%               {hoge2/figs}}
+
+\begin{document}
+\title{Title}
+\author{Author}
+\date{\today}
+% \maketitle
+% \tableofcontents
+
+\input{chapter1/chapter1}
+
+\end{document}
