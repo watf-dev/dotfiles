@@ -1,0 +1,8 @@
+ZINIT_DIR="${HOME}/.zinit"
+if [ ! -e ${ZINIT_DIR}/bin/zinit.zsh ]; then
+  mkdir -p ${ZINIT_DIR}
+  git clone https://github.com/zdharma-continuum/zinit.git ${ZINIT_DIR}/bin
+fi
+source ${ZINIT_DIR}/bin/zinit.zsh
+
+# vim: filetype=zsh expandtab
