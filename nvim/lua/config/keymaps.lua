@@ -43,4 +43,7 @@ vim.keymap.set('n', '<leader>sp', function() require("dap").down() end, { silent
 -- vim.keymap.set({'n', 'v'}, '<Leader>dp', function() require('dap.ui.widgets').preview() end) -- dont know how to use effectively 
 
 ---- C++ compile
-vim.api.nvim_set_keymap('n', '<F2>', ":w<CR>:rightbelow vsp | terminal g++ -g *.cpp -o main && ./main <CR>i", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<F2>', ":w<CR>:rightbelow vsp | terminal g++ -g -std=c++17 *.cpp -o main && ./main <CR>i", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<F2>', ":w<CR>:rightbelow vsp | terminal g++ -g -std=c++17 *.cpp -o main && ./main<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<F2>', ":w<CR>:rightbelow vsp | terminal g++-14 -std=c++14 -g *.cpp -o main && ./main <CR>i", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<F2>', ":w<CR>:rightbelow vsp | terminal g++-14 -std=c++14 -g -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include *.cpp -o main && ./main <CR>i", { noremap = true, silent = true })

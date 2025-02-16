@@ -11,6 +11,9 @@ if not vim.uv.fs_stat(lazypath) then
 end
 vim.opt.runtimepath:prepend(lazypath)
 
+-- set encoding
+vim.opt.fileencoding = "utf-8"
+
 -- set leader
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"

@@ -2,7 +2,7 @@
 # Created: <+DATE+> by <+AUTHOR+>
 
 def main():
-  import tafsm.argparse as argparse
+  import argparse
   parser = argparse.ArgumentParser(description="""\
 <+CURSOR+>
 """)

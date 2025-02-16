@@ -1,4 +1,6 @@
 // Created: <+DATE+> by <+AUTHOR+>
-//#pragma onece
+#pragma onece
+
+using namespace std;
 
 <+CURSOR+>

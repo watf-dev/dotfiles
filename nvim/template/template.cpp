@@ -2,6 +2,9 @@
 #include <iostream>
 #include <cmath>
 #include <algorithm>
+/*#include ".hpp"*/
+
+using namespace std;
 
 int main(){
    <+CURSOR+>

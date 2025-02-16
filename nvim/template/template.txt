@@ -1,0 +1,31 @@
+cmake_minimum_required(VERSION 3.4.3)
+
+### Project name and programming language
+project(CMake CXX)
+
+### Set the C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+### Find Catch2 (installed globally in /usr/local)
+find_package(Catch2 3 REQUIRED)
+
+### Add the include directory for your library headers
+include_directories(${CMAKE_SOURCE_DIR}/library/inc)
+
+### Gather files and store paths in CMake variables
+file(GLOB LIBRARY_SOURCE_FILES library/src/*.cpp)
+file(GLOB TEST_SOURCE_FILES library/test/*.cpp)
+file(GLOB HEADER_FILES library/inc/*.h*)
+
+### Add the main library target
+add_library(MyLibrary SHARED ${LIBRARY_SOURCE_FILES} ${HEADER_FILES})
+
+### Add the test executable for Catch2
+add_executable(testrunner ${TEST_SOURCE_FILES} ${HEADER_FILES})
+target_link_libraries(testrunner PRIVATE MyLibrary Catch2::Catch2WithMain)
+
+### Add the main application executable
+add_executable(main drivers/main.cpp ${HEADER_FILES})
+target_link_libraries(main PRIVATE MyLibrary)
+

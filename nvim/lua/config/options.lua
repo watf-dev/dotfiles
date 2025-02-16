@@ -25,7 +25,8 @@ vim.cmd([[highlight Statement ctermfg=208]])  -- orange
 vim.cmd([[highlight Delimiter ctermfg=254]])  -- white
 vim.cmd([[highlight Special ctermfg=254]])  -- white
 vim.cmd([[highlight SpecialChar ctermfg=254]])  -- white
-vim.cmd([[highlight Type ctermfg=254]])  -- white
+-- vim.cmd([[highlight Type ctermfg=254]])  -- white
+vim.cmd([[highlight Type ctermfg=87 guifg=#5fafff]])  -- Light Blue
 vim.cmd([[highlight Operator ctermfg=87]])  -- blue
 vim.cmd([[highlight MatchParen cterm=NONE ctermfg=87 ctermbg=237 guibg=NONE]])  -- blue
 
