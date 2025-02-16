@@ -8,7 +8,6 @@ fi
 [[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 # typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-export LS_COLORS="di=36;1:"$LS_COLORS
 
 source ${ZDOTDIR}/zinitrc
 
@@ -24,17 +23,16 @@ export HISTFILE=${HOME}/.zsh_history
 
 typeset -gT PYTHONPATH pythonpath
 typeset -xU path PATH pythonpath PYTHONPATH fpath FPATH ld_library_path LD_LIBRARY_PATH
-# fpath+=(/opt/tafsm/zsh/completion(N-/))
 
-autoload -Uz compinit && compinit -u
 source ${ZDOTDIR}/plugin.zshrc
+autoload -Uz compinit && compinit -u
 
 WORDCHARS=${WORDCHARS:s,/,,}
 
 export PYTHONHISTORY=${HOME}/.pyhistory
 export PYTHONSTARTUP=${HOME}/.pystartup
 
-function chpwd() {ls}
+function chpwd() { ls --color=auto }
 alias la="ls -a"
 alias ll="ls -l"
 alias google-chrome='open -a "Google Chrome"'
