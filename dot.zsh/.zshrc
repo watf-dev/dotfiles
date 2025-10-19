@@ -263,4 +263,5 @@ setopt nobanghist
 # bindkey '^r' select-history
 # #########
 
+### Kratos ###
 
